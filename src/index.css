@@ -1,0 +1,40 @@
+@import "tailwindcss";
+
+@import url('https://fonts.googleapis.com/css2?family=Gowun+Batang:wght@400;700&family=Noto+Sans+KR:wght@300;400;500;700&display=swap');
+
+@layer base {
+  body {
+    background-color: #f6f5f0;
+    font-family: 'Noto Sans KR', sans-serif;
+    color: #2e2c2a;
+    -webkit-font-smoothing: antialiased;
+  }
+}
+
+.font-serif-emotional {
+  font-family: 'Gowun Batang', Georgia, serif;
+}
+
+/* Smooth scrolling within standard containers */
+html {
+  scroll-behavior: smooth;
+}
+
+/* Custom scrollbar styling for the mobile mockup experience */
+::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+::-webkit-scrollbar-thumb {
+  background: rgba(0, 0, 0, 0.1);
+  border-radius: 9999px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: rgba(0, 0, 0, 0.2);
+}

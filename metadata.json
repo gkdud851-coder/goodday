@@ -1,0 +1,6 @@
+{
+  "name": "주간보호센터 모바일 랜딩페이지",
+  "description": "굿데이케어센터의 대표자 인사말, 감동적인 브랜드 스토리, 10대 특별 돌봄 프로그램 및 보행 변화 Before & After, 보호자 안심 프로그램 모달을 포함한 모바일 전용 랜딩페이지",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
