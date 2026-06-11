@@ -24,7 +24,8 @@ import {
   PROGRAMS, 
   ACHIEVEMENTS, 
   ANSIM_MODAL_CONTENT, 
-  CONTACT_INFO 
+  CONTACT_INFO,
+  YOUTUBE_VIDEOS
 } from './data';
 import ProgramCard from './components/ProgramCard';
 import AnsimModal from './components/AnsimModal';
@@ -363,7 +364,7 @@ export default function App() {
 
         {/* 5. ANXIETY RELIEF SENSOR & TRIGGER SECTION (보호자 불안 해소 안심 장치) */}
         <section id="anxiety-trigger-section" className="py-12 bg-amber-50 px-6 text-center border-y border-amber-900/10">
-          <div className="max-w-xs mx-auto space-y-4.5">
+          <div className="max-w-sm mx-auto space-y-4.5">
             <h3 className="text-sm font-bold text-neutral-900 leading-snug font-serif-emotional">
               부모님 등교 적응이 염려스러우신가요?
             </h3>
@@ -372,19 +373,44 @@ export default function App() {
               부모님께서 낯선 환경에 긴장하시는 걱정, 보호자분들의 무거운 마음을 100% 공감합니다.
             </p>
 
-            {/* Animated Pulsing Action Button */}
-            <motion.button
-              type="button"
-              id="modal-trigger-btn"
-              onClick={() => setIsModalOpen(true)}
-              whileHover={{ scale: 1.02 }}
-              whileTap={{ scale: 0.98 }}
-              className="w-full min-h-[50px] px-5 py-3.5 bg-amber-500 hover:bg-amber-600 text-white font-extrabold text-[12.5px] rounded-2xl shadow-lg border border-amber-600/10 flex items-center justify-center gap-1.5 relative overflow-hidden group cursor-pointer"
-            >
-              {/* Pulsing light overlay for attention */}
-              <span className="absolute inset-0 bg-white/20 animate-pulse mix-blend-overlay"></span>
-              <span>{ANSIM_MODAL_CONTENT.triggerText}</span>
-            </motion.button>
+            {/* YouTube Videos Section */}
+            <div className="mt-8 pt-6 border-t border-amber-950/10 text-left">
+              <p className="text-[11px] font-black uppercase text-amber-900 tracking-wider mb-3.5 flex items-center justify-start gap-1.5 select-none">
+                <span className="w-1.5 h-1.5 rounded-full bg-red-600 animate-pulse"></span>
+                <span>실제 적응기 & 일상 유튜브 영상 (6편)</span>
+              </p>
+              <div className="space-y-2">
+                {YOUTUBE_VIDEOS.map((video) => (
+                  <motion.a
+                    key={video.id}
+                    href={video.url}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    whileHover={{ scale: 1.01, backgroundColor: "#ffffff" }}
+                    whileTap={{ scale: 0.99 }}
+                    className="flex items-center justify-between p-3 bg-white/55 hover:bg-white rounded-xl border border-amber-950/5 hover:border-amber-500/25 shadow-xs transition-all duration-200 group"
+                  >
+                    <div className="flex items-center gap-2.5 min-w-0">
+                      {/* Premium YouTube-inspired red play badge */}
+                      <span className="w-7 h-7 rounded-lg bg-red-50 flex items-center justify-center text-red-600 group-hover:bg-red-600 group-hover:text-white transition-colors duration-200 shrink-0 shadow-xs border border-red-200/25">
+                        <span className="text-[10px] transform translate-x-[1px]">▶</span>
+                      </span>
+                      <div className="min-w-0">
+                        <span className="inline-block text-[8px] font-black px-1.5 py-0.5 rounded-sm bg-neutral-150 text-neutral-600 mr-2 border border-neutral-200/50">
+                          {video.tag}
+                        </span>
+                        <span className="text-[12px] font-bold text-neutral-800 group-hover:text-amber-900 align-middle">
+                          {video.title}
+                        </span>
+                      </div>
+                    </div>
+                    <span className="text-[10px] text-[#8e8d89] font-bold flex items-center gap-0.5 group-hover:text-red-600 shrink-0 select-none">
+                      보기 <ExternalLink className="w-2.5 h-2.5 group-hover:translate-x-0.5 transition-transform" />
+                    </span>
+                  </motion.a>
+                ))}
+              </div>
+            </div>
           </div>
         </section>
 

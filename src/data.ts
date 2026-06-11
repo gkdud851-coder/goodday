@@ -69,7 +69,7 @@ export const PROGRAMS: ProgramItem[] = [
     numString: "02",
     title: "김치마저 직접 담그겠다는 조리원 선생님들",
     story: "내 부모님이 드실 밥상이기에 완제품 반찬은 쓰지 않습니다. 김치 한 포기까지 사랑으로 직접 담가 대접합니다.",
-    image: getAssetUrl('우수종사자 선정.jpg'), // Dedication scene
+    image: getAssetUrl('조리원사진.jpg'), // Dedication scene
     iconName: "ChefHat"
   },
   {
@@ -194,3 +194,12 @@ export const CONTACT_INFO = {
   anniversaryPhoto: getAssetUrl('주년행사선물.jpg'),
   logoPhoto: getAssetUrl('로고.png')
 };
+
+export const YOUTUBE_VIDEOS = [
+  { id: "yt-1", title: "생신잔치 이야기", url: "https://www.youtube.com/watch?v=EspphLZL85E", tag: "행사" },
+  { id: "yt-2", title: "가족보호자님과 함께한 하루", url: "https://www.youtube.com/watch?v=8v71F3GtXKU", tag: "일상" },
+  { id: "yt-3", title: "즐거운 나들이", url: "https://www.youtube.com/watch?v=hj-m7g64XCE", tag: "야외활동" },
+  { id: "yt-4", title: "쉬는시간 이야기", url: "https://www.youtube.com/watch?v=8tQvbNpuTHM", tag: "소통" },
+  { id: "yt-5", title: "운동은 어떻게?", url: "https://www.youtube.com/watch?v=M89tXB5QSU0", tag: "재활" },
+  { id: "yt-6", title: "요양보호사의 하루", url: "https://www.youtube.com/watch?v=v_Qv-TcjjLU", tag: "정성" }
+];
